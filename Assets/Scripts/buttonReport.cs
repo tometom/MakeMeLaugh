@@ -6,9 +6,11 @@ using UnityEngine;
 public class buttonReport : MonoBehaviour
 {
     AudioSource soundToPlay;
+    public float startingAngle, endingAngle;
     // Start is called before the first frame update
     void Start()
     {
+        
         soundToPlay = GetComponent<AudioSource>();
     }
 
@@ -20,5 +22,15 @@ public class buttonReport : MonoBehaviour
     public void report(){
         print("Button " + this.name + " pressed");
         soundToPlay.Play();
+        rotate();
+
+    }
+    public void rotate(){
+        StartCoroutine(rotateCountdown(0.3f));
+    }
+    IEnumerator rotateCountdown(float seconds){
+        transform.rotation = Quaternion.Euler(endingAngle,0,0);
+        yield return new WaitForSeconds(seconds);
+        transform.rotation = Quaternion.Euler(startingAngle,0,0);
     }
 }
