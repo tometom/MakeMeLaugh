@@ -18,11 +18,11 @@ public class beatManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float timeTillNextBeat = 60/bpm;
+        float timeTillNextBeat = 60f/bpm;
         timer+=Time.deltaTime;
         if(timer>= timeTillNextBeat){
             beatSound.Play();
-            timer = 0;
+            timer = 0f;
         }
     }
 }
