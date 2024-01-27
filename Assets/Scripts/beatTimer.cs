@@ -9,6 +9,7 @@ public class beatTimer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        beatLine = transform.Find("beatLine");
     }
 
     // Update is called once per frame

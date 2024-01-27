@@ -20,10 +20,10 @@ public class beatManager : MonoBehaviour
 
     static Dictionary<string, int> points = new Dictionary<string, int>{
         { "Muu", 5},
-        { "Muu", 5},
-        { "Muu", 5},
-        { "Muu", 5},
-        { "Muu", 5},
+        { "1", 5},
+        { "2", 5},
+        { "3", 5},
+        { "4", 5},
     };
 
 
@@ -76,7 +76,7 @@ public class beatManager : MonoBehaviour
         }
     }
 
-    private Boolean isOne() {
+    private bool isOne() {
         return BEAT_TRACKS[currentTrack][currentBar][currentBeat] == '1';
     }
 
@@ -85,13 +85,6 @@ public class beatManager : MonoBehaviour
         if(!repetitionCounter.ContainsKey(soundName))
             repetitionCounter.Add(soundName, 0);
         repetitionCounter[soundName] = repetitionCounter[soundName] + 1;
-    
-        int supposedScore = 
-
-        int score = 0;
-        // check if on beat
-        if(!isOne())
-
-    
+        //TODO: Scoring
     }
 }
