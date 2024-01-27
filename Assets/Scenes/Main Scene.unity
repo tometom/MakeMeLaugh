@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -794,6 +794,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7635826562936255635, guid: 448cb4404c64f0a44a860f9884e9fcc6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9285d58f11d44bf4fb42d9252f314966, type: 2}
+    - target: {fileID: -7635826562936255635, guid: 448cb4404c64f0a44a860f9884e9fcc6, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 68ffa0ec24c936d49bb0879e0c50b37a, type: 2}
     - target: {fileID: 919132149155446097, guid: 448cb4404c64f0a44a860f9884e9fcc6, type: 3}
       propertyPath: m_Name
       value: ArmR
@@ -963,6 +971,22 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7635826562936255635, guid: 2d298b4634562f54086912a8444abe82, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 182c9ae4f9cdedf44a271211ce31e2b9, type: 2}
+    - target: {fileID: -7635826562936255635, guid: 2d298b4634562f54086912a8444abe82, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: f1ae3f5ea48ebaf4fb05c059f9644268, type: 2}
+    - target: {fileID: -7635826562936255635, guid: 2d298b4634562f54086912a8444abe82, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: eabb6cb21fff1bf4a9dfe83a4342a26e, type: 2}
+    - target: {fileID: -7635826562936255635, guid: 2d298b4634562f54086912a8444abe82, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: 68ffa0ec24c936d49bb0879e0c50b37a, type: 2}
     - target: {fileID: 919132149155446097, guid: 2d298b4634562f54086912a8444abe82, type: 3}
       propertyPath: m_Name
       value: Head
@@ -1919,6 +1943,26 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7635826562936255635, guid: 8c23e68ca1e75a044b31b7fd1609abbb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 68ffa0ec24c936d49bb0879e0c50b37a, type: 2}
+    - target: {fileID: -7635826562936255635, guid: 8c23e68ca1e75a044b31b7fd1609abbb, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 24bb35cdc02a08e47a9e3d97d7e0435f, type: 2}
+    - target: {fileID: -7635826562936255635, guid: 8c23e68ca1e75a044b31b7fd1609abbb, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9285d58f11d44bf4fb42d9252f314966, type: 2}
+    - target: {fileID: -7635826562936255635, guid: 8c23e68ca1e75a044b31b7fd1609abbb, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: 35d626565090b86438f097d81c28edd6, type: 2}
+    - target: {fileID: -7635826562936255635, guid: 8c23e68ca1e75a044b31b7fd1609abbb, type: 3}
+      propertyPath: m_Materials.Array.data[4]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9faeefba9c40cb148916be00ee94853a, type: 2}
     - target: {fileID: 919132149155446097, guid: 8c23e68ca1e75a044b31b7fd1609abbb, type: 3}
       propertyPath: m_Name
       value: Body
@@ -4401,6 +4445,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7635826562936255635, guid: 1af62992d0fc9fa439619ff0b9308b37, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 68ffa0ec24c936d49bb0879e0c50b37a, type: 2}
+    - target: {fileID: -7635826562936255635, guid: 1af62992d0fc9fa439619ff0b9308b37, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9285d58f11d44bf4fb42d9252f314966, type: 2}
     - target: {fileID: 919132149155446097, guid: 1af62992d0fc9fa439619ff0b9308b37, type: 3}
       propertyPath: m_Name
       value: ArmL
