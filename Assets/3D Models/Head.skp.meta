@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: ebb4a633f29cf0d4c8143dd146b8d1c0
+=======
+guid: 64b5bfa24dafde347a679694eea0c235
+>>>>>>> f5ed7b48a9bb4860189ba103bfaf832382be4d0d
 SketchUpImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
