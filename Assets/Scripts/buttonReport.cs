@@ -12,6 +12,8 @@ public class buttonReport : MonoBehaviour
     void Start()
     {
         soundToPlay = GetComponent<AudioSource>();
+        startingAngle = transform.rotation.eulerAngles.x;
+        endingAngle = startingAngle + angleDifference;
     }
 
     // Update is called once per frame
