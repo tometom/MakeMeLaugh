@@ -11,7 +11,8 @@ public class beatManager : MonoBehaviour
 };
 
     AudioSource beatSound;
-    public int bpm;
+    [SerializeField]
+    public static int bpm = 120;
     int onBeat = 0;
     float timer;
     // Start is called before the first frame update
@@ -27,7 +28,7 @@ public class beatManager : MonoBehaviour
         float timeTillNextBeat = 60f/bpm;
         timer+=Time.deltaTime;
         if(timer>= timeTillNextBeat){
-            if(BEAT_TRACKS[0][onBeat] == '1')
+            //if(BEAT_TRACKS[0][onBeat] == '1')
                 beatSound.Play();
             onBeat++;
             timer = 0f;

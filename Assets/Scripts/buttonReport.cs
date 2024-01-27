@@ -26,7 +26,7 @@ public class buttonReport : MonoBehaviour
 
     }
     public void rotate(){
-        StartCoroutine(rotateCountdown(0.3f));
+        StartCoroutine(rotateCountdown(30f/beatManager.bpm));
     }
     IEnumerator rotateCountdown(float seconds){
         transform.rotation = Quaternion.Euler(endingAngle,0,0);
