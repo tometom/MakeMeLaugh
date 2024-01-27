@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class followMouse : MonoBehaviour
 {
-    public float xOffset, yOffset;
+    [Range(0,1)]
+    public float xOffsetPct, yOffsetPct;
     public Vector3 restingPosition;
     public bool isLeft;
 
@@ -24,7 +25,7 @@ public class followMouse : MonoBehaviour
             if (Input.mousePosition.x < Screen.width / 2)
             {
                 currLerpFactor = 0f;
-                GetComponent<RectTransform>().position = Input.mousePosition + new Vector3(xOffset, yOffset, 0);
+                GetComponent<RectTransform>().position = Input.mousePosition + new Vector3(-xOffsetPct*Screen.width, yOffsetPct*Screen.height, 0);
             }
             else
             {
@@ -38,7 +39,7 @@ public class followMouse : MonoBehaviour
             if (Input.mousePosition.x > Screen.width / 2)
             {
                 currLerpFactor = 0f;
-                GetComponent<RectTransform>().position = Input.mousePosition + new Vector3(-xOffset, yOffset, 0);
+                GetComponent<RectTransform>().position = Input.mousePosition + new Vector3(xOffsetPct*Screen.width, yOffsetPct*Screen.height, 0);
             }
             else
             {

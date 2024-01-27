@@ -1858,8 +1858,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2eace495dc3d3a64bbf7e1747705113a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xOffset: -225
-  yOffset: 72
+  xOffsetPct: 0.25
+  yOffsetPct: 0.15
   restingPosition: {x: 1050, y: 200, z: 0}
   isLeft: 0
 --- !u!114 &1200447325
@@ -3551,8 +3551,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2eace495dc3d3a64bbf7e1747705113a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xOffset: -225
-  yOffset: 72
+  xOffsetPct: 0.25
+  yOffsetPct: 0.15
   restingPosition: {x: -1050, y: 200, z: 0}
   isLeft: 1
 --- !u!114 &2102859812
