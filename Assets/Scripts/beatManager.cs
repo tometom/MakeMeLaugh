@@ -19,11 +19,14 @@ public class beatManager : MonoBehaviour
     };
 
     static Dictionary<string, int> points = new Dictionary<string, int>{
+        { "Fart", 5},
+        { "Boom", 5},
         { "Muu", 5},
-        { "1", 5},
-        { "2", 5},
-        { "3", 5},
-        { "4", 5},
+        { "Chicken", 5},
+        { "PLACE_HOLDER", 5},
+        { "Yoda", 5},
+        { "Error", 5},
+        { "Chipmunk", 5},
     };
 
 
