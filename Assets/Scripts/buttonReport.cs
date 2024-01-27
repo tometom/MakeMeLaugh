@@ -6,11 +6,11 @@ using UnityEngine;
 public class buttonReport : MonoBehaviour
 {
     AudioSource soundToPlay;
-    public float startingAngle, endingAngle;
+    public float angleDifference;
+    float startingAngle,endingAngle;
     // Start is called before the first frame update
     void Start()
     {
-        
         soundToPlay = GetComponent<AudioSource>();
     }
 

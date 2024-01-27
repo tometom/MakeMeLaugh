@@ -6,6 +6,7 @@ using UnityEngine;
 public class followMouse : MonoBehaviour
 {
     public float xOffset, yOffset;
+    public Vector3 restingPosition;
     public bool isLeft;
 
     float currLerpFactor;
@@ -29,7 +30,7 @@ public class followMouse : MonoBehaviour
             {
                 currLerpFactor +=Time.deltaTime;
                 currLerpFactor*=currLerpFactor +0.9f;
-                lerpToTarget( new Vector3(-350f, 70f),currLerpFactor);
+                lerpToTarget(restingPosition,currLerpFactor);
             }
         }
         else
@@ -43,7 +44,7 @@ public class followMouse : MonoBehaviour
             {
                 currLerpFactor +=Time.deltaTime;
                 currLerpFactor*=currLerpFactor + 0.9f;
-                lerpToTarget(new Vector3(350f, 70f),currLerpFactor);
+                lerpToTarget(restingPosition,currLerpFactor);
             }
         }
     }
