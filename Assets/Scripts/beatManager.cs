@@ -66,6 +66,8 @@ public class beatManager : MonoBehaviour
     public int currentBar   = 0;
     public int currentBeat  = 0;
 
+    int lastInputBeat = 0;
+
     float barScore = 0;
     public static float totalScore = 0;
 
@@ -141,6 +143,7 @@ public class beatManager : MonoBehaviour
                         sb.Append('1');
                     }
                 }
+                print(sb.ToString());
                 bool hasPattern = false;
                 foreach(var pattern in Bars){
                     if(pattern.Value.Equals(sb.ToString())){
@@ -177,8 +180,6 @@ public class beatManager : MonoBehaviour
                     playerInputCurrentBar.Add(new Tuple<string, string>(SILENCE_SOUND_ENUM, HIT_ENUM));
                 }
             }
-
-
             timer = 0f;
         }
     }
@@ -194,27 +195,20 @@ public class beatManager : MonoBehaviour
 
 
     public void register(string soundName) {
-        print(soundName);
-        if(!repetitionCounter.ContainsKey(soundName))
-            repetitionCounter.Add(soundName, 0);
-        repetitionCounter[soundName] = repetitionCounter[soundName] + 1;
-        if(timeTillNextBeat-timer > timeTillNextBeat * hitTolerance)
+        if(timeTillNextBeat-timer > timeTillNextBeat * hitTolerance && currentBeat != lastInputBeat)
         {
             //Hit
             playerInputCurrentBar.Add(new Tuple<string, string>(soundName, HIT_ENUM));
-
+            if(!repetitionCounter.ContainsKey(soundName))
+                repetitionCounter.Add(soundName, 0);
+            repetitionCounter[soundName] = repetitionCounter[soundName] + 1;
+            lastInputBeat = currentBeat;
         }
         else
         {
             //Miss
             playerInputCurrentBar.Add(new Tuple<string, string>(soundName, MISS_ENUM));
         }
-        //TODO combo
         
-
-        //TODO: Scoring
-
-
-
     }
 }
