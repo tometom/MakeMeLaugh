@@ -2,9 +2,15 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class buttonReport : MonoBehaviour
 {
+
+
+
+    public UnityEvent onClick;
+
     AudioSource soundToPlay;
     public float angleDifference;
     float startingAngle,endingAngle;
@@ -25,7 +31,7 @@ public class buttonReport : MonoBehaviour
         print("Button " + this.name + " pressed");
         soundToPlay.Play();
         rotate();
-
+        onClick.Invoke();
     }
     public void rotate(){
         StartCoroutine(rotateCountdown(30f/beatManager.bpm));
