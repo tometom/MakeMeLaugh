@@ -229,7 +229,7 @@ GameObject:
   - component: {fileID: 173857402}
   - component: {fileID: 173857401}
   m_Layer: 0
-  m_Name: Quad
+  m_Name: Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -493,7 +493,7 @@ GameObject:
   - component: {fileID: 183902939}
   - component: {fileID: 183902938}
   m_Layer: 0
-  m_Name: Four
+  m_Name: Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -576,7 +576,7 @@ GameObject:
   - component: {fileID: 301630967}
   - component: {fileID: 301630966}
   m_Layer: 0
-  m_Name: Four
+  m_Name: Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -859,7 +859,7 @@ GameObject:
   - component: {fileID: 442836269}
   - component: {fileID: 442836268}
   m_Layer: 0
-  m_Name: Quad
+  m_Name: Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1130,7 +1130,7 @@ GameObject:
   - component: {fileID: 508398378}
   - component: {fileID: 508398377}
   m_Layer: 0
-  m_Name: Four
+  m_Name: Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1501,7 +1501,7 @@ GameObject:
   - component: {fileID: 665509413}
   - component: {fileID: 665509412}
   m_Layer: 0
-  m_Name: Four
+  m_Name: Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1765,7 +1765,7 @@ GameObject:
   - component: {fileID: 771351376}
   - component: {fileID: 771351375}
   m_Layer: 0
-  m_Name: Four
+  m_Name: Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1905,7 +1905,7 @@ GameObject:
   - component: {fileID: 891257619}
   - component: {fileID: 891257618}
   m_Layer: 0
-  m_Name: Quad (5)
+  m_Name: Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2081,7 +2081,7 @@ GameObject:
   - component: {fileID: 952521801}
   - component: {fileID: 952521800}
   m_Layer: 0
-  m_Name: Four
+  m_Name: Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2939,7 +2939,7 @@ GameObject:
   - component: {fileID: 1312248322}
   - component: {fileID: 1312248321}
   m_Layer: 0
-  m_Name: Four
+  m_Name: Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3022,7 +3022,7 @@ GameObject:
   - component: {fileID: 1367887387}
   - component: {fileID: 1367887386}
   m_Layer: 0
-  m_Name: Quad (6)
+  m_Name: Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3105,7 +3105,7 @@ GameObject:
   - component: {fileID: 1509715248}
   - component: {fileID: 1509715247}
   m_Layer: 0
-  m_Name: Quad (4)
+  m_Name: Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3221,7 +3221,7 @@ GameObject:
   - component: {fileID: 1564189772}
   - component: {fileID: 1564189771}
   m_Layer: 0
-  m_Name: Four
+  m_Name: Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3485,7 +3485,7 @@ GameObject:
   - component: {fileID: 1576476807}
   - component: {fileID: 1576476806}
   m_Layer: 0
-  m_Name: Quad
+  m_Name: Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3568,7 +3568,7 @@ GameObject:
   - component: {fileID: 1632293169}
   - component: {fileID: 1632293168}
   m_Layer: 0
-  m_Name: Quad
+  m_Name: Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3938,7 +3938,7 @@ GameObject:
   - component: {fileID: 1846024829}
   - component: {fileID: 1846024828}
   m_Layer: 0
-  m_Name: Quad
+  m_Name: Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
