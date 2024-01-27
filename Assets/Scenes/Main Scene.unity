@@ -444,6 +444,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616b47a68722c2449b262d945971512d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
   angleDifference: -20
 --- !u!65 &183492138
 BoxCollider:
@@ -1297,6 +1300,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54078221522fe9d40a9b757cab6da10e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  positionModifier: 02000000040000000300000006000000
+  currentTrack: 0
+  currentBar: 0
+  currentBeat: 0
 --- !u!4 &542890548
 Transform:
   m_ObjectHideFlags: 0
@@ -1775,6 +1782,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616b47a68722c2449b262d945971512d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
   angleDifference: -20
 --- !u!65 &704096301
 BoxCollider:
@@ -2598,6 +2608,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616b47a68722c2449b262d945971512d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
   angleDifference: -20
 --- !u!65 &1155088736
 BoxCollider:
@@ -2856,6 +2869,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616b47a68722c2449b262d945971512d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
   angleDifference: -20
 --- !u!65 &1223925940
 BoxCollider:
@@ -3372,6 +3388,14 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7635826562936255635, guid: 8a18bf30aea8d524f9fc731e7a4159ca, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7b2fc28be60818040a532ea5f29869cf, type: 2}
+    - target: {fileID: -7635826562936255635, guid: 8a18bf30aea8d524f9fc731e7a4159ca, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 702a40aa582f1a143b3ac182b682ac8a, type: 2}
     - target: {fileID: 919132149155446097, guid: 8a18bf30aea8d524f9fc731e7a4159ca, type: 3}
       propertyPath: m_Name
       value: Chair
@@ -3621,6 +3645,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616b47a68722c2449b262d945971512d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
   angleDifference: -20
 --- !u!65 &1570766427
 BoxCollider:
@@ -4059,6 +4086,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616b47a68722c2449b262d945971512d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
   angleDifference: -20
 --- !u!65 &1647975052
 BoxCollider:
@@ -4308,6 +4338,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616b47a68722c2449b262d945971512d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
   angleDifference: -20
 --- !u!65 &1869024065
 BoxCollider:
@@ -4474,6 +4507,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616b47a68722c2449b262d945971512d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
   angleDifference: -20
 --- !u!65 &1945889607
 BoxCollider:
