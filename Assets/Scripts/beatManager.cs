@@ -18,7 +18,7 @@ public class beatManager : MonoBehaviour
         { "init" , "1000" },        
     };
 
-    static Dictionary<string, string> points = new Dictionary<string, int>{
+    static Dictionary<string, int> points = new Dictionary<string, int>{
         { "Muu", 5},
         { "Muu", 5},
         { "Muu", 5},
