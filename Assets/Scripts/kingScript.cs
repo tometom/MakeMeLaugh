@@ -19,16 +19,17 @@ public class kingScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    public void triggerChange(KingHappiness happiness){
+    public void triggerChange(KingHappiness happiness)
+    {
         highlight.ChangeLightColor(happiness);
         setAndResetTrigger(happiness);
         changeFaceMaterial(happiness);
@@ -98,6 +99,16 @@ public class kingScript : MonoBehaviour
         }
     }
 
+    public void killKing()
+    {
+        animator.SetTrigger("GetDead");
+        animator.ResetTrigger("GetHappy");
+        animator.ResetTrigger("GetSus");
+        animator.ResetTrigger("GetSmiling");
+        animator.ResetTrigger("GetAngry");
+        animator.ResetTrigger("GetIdle");
+    }
+
     private void changeFaceMaterial(KingHappiness happiness)
     {
         GameObject head = this.transform.Find("Head/default").gameObject;
@@ -107,41 +118,41 @@ public class kingScript : MonoBehaviour
         Material[] materials = renderer.materials;
         //.GetComponent<Renderer>();
         switch (happiness)
-            {
-                case KingHappiness.FRUSTRATED:
+        {
+            case KingHappiness.FRUSTRATED:
                 materials[2] = kingAngryFaceMaterial;
                 Debug.Log("################################   CHANGED FACE TO FRUSTRATED");
                 break;
 
 
-                case KingHappiness.CONFUSED:
+            case KingHappiness.CONFUSED:
                 materials[2] = kingSuspiciousFaceMaterial;
                 Debug.Log("################################   CHANGED FACE TO SUSPICIOUS");
                 break;
 
-                case KingHappiness.NEUTRAL:
+            case KingHappiness.NEUTRAL:
                 materials[2] = kingNeutralFaceMaterial;
                 Debug.Log("################################   CHANGED FACE TO NEUTRAL");
                 break;
 
-                case KingHappiness.HAPPY:
+            case KingHappiness.HAPPY:
                 materials[2] = kingHappyFaceMaterial;
                 Debug.Log("################################   CHANGED FACE TO HAPPY");
                 break;
 
-                case KingHappiness.VERYHAPPY:
+            case KingHappiness.VERYHAPPY:
                 materials[2] = kingSmilingFaceMaterial;
                 Debug.Log("################################   CHANGED FACE TO SMILING");
                 break;
 
 
-                default:
+            default:
                 materials[2] = kingNeutralFaceMaterial;
                 Debug.Log("################################   CHANGED FACE TO NEUTRAL");
                 break;
 
-            }
+        }
 
         renderer.materials = materials;
-        }
+    }
 }
