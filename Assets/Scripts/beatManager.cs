@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class beatManager : MonoBehaviour
@@ -129,7 +130,11 @@ public class beatManager : MonoBehaviour
                     if(hitOrMiss.Equals(HIT_ENUM))
                     {
                         if(!soundName.Equals(SILENCE_SOUND_ENUM)){
-                            float soundScore = points[soundName] / repetitionCounter[soundName] * positionModifier[beatIndex];
+                            float repPenaltyMultiplier = 1;
+                            if(repetitionCounter[soundName]>1)
+                                repPenaltyMultiplier = repetitionCounter[soundName];
+                            print(repPenaltyMultiplier);
+                            float soundScore = points[soundName] / repPenaltyMultiplier * positionModifier[beatIndex];
 
                             float categoryMultiplier = 1f;
 
@@ -247,7 +252,16 @@ public class beatManager : MonoBehaviour
             playerInputCurrentBar.Add(new Tuple<string, string>(soundName, HIT_ENUM));
             if(!repetitionCounter.ContainsKey(soundName))
                 repetitionCounter.Add(soundName, 0);
-            repetitionCounter[soundName] = repetitionCounter[soundName] + 1;
+            repetitionCounter[soundName] = repetitionCounter[soundName] + 2;
+            List<string> allButSoundName = new List<string>(repetitionCounter.Count);
+            foreach(var repetition in repetitionCounter.Keys){
+                if(!repetition.Equals(soundName)){
+                    allButSoundName.Add(repetition);
+                }
+            }
+            foreach(var name in allButSoundName ){
+                repetitionCounter[name]--;
+            }
             lastInputBeat = currentBeat;
         }
         else
