@@ -102,7 +102,7 @@ public class beatManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(totalScore > 10000f){
+        if(totalScore > 8000f){
             king.killKing();
         }
         timeTillNextBeat = 60f/bpm;
