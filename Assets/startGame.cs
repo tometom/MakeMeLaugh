@@ -17,6 +17,7 @@ public class startGame : MonoBehaviour
         
     }
     public void go(){
+        Time.timeScale = 1f;
         SceneManager.LoadScene("Main Scene");
     }
 }
