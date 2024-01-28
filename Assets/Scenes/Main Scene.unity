@@ -858,7 +858,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 0.93962264, g: 0.8721185, b: 0.64355284, a: 1}
   m_Intensity: 11.8
-  m_Range: 1400
+  m_Range: 30
   m_SpotAngle: 29
   m_InnerSpotAngle: 1
   m_CookieSize: 10
@@ -1047,7 +1047,7 @@ Light:
     m_Strength: 1
     m_Bias: 0.23
     m_NormalBias: 0.29
-    m_NearPlane: 3.51
+    m_NearPlane: 6.26
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -1069,7 +1069,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 1
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
