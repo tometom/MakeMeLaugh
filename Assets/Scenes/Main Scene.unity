@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311947, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1045,7 +1045,7 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-  m_Color: {r: 0.015579104, g: 1, b: 0, a: 1}
+  m_Color: {r: 0.9411765, g: 0.87058824, b: 0.6431373, a: 1}
   m_Intensity: 11.8
   m_Range: 38.9
   m_SpotAngle: 52
@@ -1394,7 +1394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54078221522fe9d40a9b757cab6da10e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  king: {fileID: 0}
+  king: {fileID: 60666470}
   positionModifier: 02000000040000000300000006000000
   currentTrack: 0
   currentBar: 0
@@ -2414,6 +2414,7 @@ RectTransform:
   - {fileID: 2102859810}
   - {fileID: 1079848670}
   - {fileID: 2042283065}
+  - {fileID: 1130984709}
   m_Father: {fileID: 893781872}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
