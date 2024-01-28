@@ -229,7 +229,7 @@ GameObject:
   - component: {fileID: 173857402}
   - component: {fileID: 173857401}
   m_Layer: 0
-  m_Name: Quad
+  m_Name: Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -346,7 +346,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: c2816e78596874da089b9aaa2f6cd0db, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -446,7 +446,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 542890547}
+        m_TargetAssemblyTypeName: beatManager, Assembly-CSharp
+        m_MethodName: register
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: PLACE_HOLDER
+          m_BoolArgument: 0
+        m_CallState: 2
   angleDifference: -20
 --- !u!65 &183492138
 BoxCollider:
@@ -481,7 +493,7 @@ GameObject:
   - component: {fileID: 183902939}
   - component: {fileID: 183902938}
   m_Layer: 0
-  m_Name: Four
+  m_Name: Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -522,7 +534,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2e49ab42f6b438b439b15917aceee11e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -564,7 +576,7 @@ GameObject:
   - component: {fileID: 301630967}
   - component: {fileID: 301630966}
   m_Layer: 0
-  m_Name: Four
+  m_Name: Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -605,7 +617,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2e49ab42f6b438b439b15917aceee11e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -741,6 +753,100 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &408529529
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 408529531}
+  - component: {fileID: 408529530}
+  m_Layer: 0
+  m_Name: KeyboardHighlight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &408529530
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408529529}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 0
+  m_Shape: 0
+  m_Color: {r: 0.93962264, g: 0.8721185, b: 0.64355284, a: 1}
+  m_Intensity: 11.8
+  m_Range: 30
+  m_SpotAngle: 29
+  m_InnerSpotAngle: 1
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.23
+    m_NormalBias: 0.29
+    m_NearPlane: 3.51
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 1
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &408529531
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408529529}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.35008955, y: -0.534239, z: 0.33343536, w: 0.6934313}
+  m_LocalPosition: {x: 9.49, y: 11.07, z: -0.82}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 57.33, y: -70.064, z: 9.422}
 --- !u!1 &442836265
 GameObject:
   m_ObjectHideFlags: 0
@@ -753,7 +859,7 @@ GameObject:
   - component: {fileID: 442836269}
   - component: {fileID: 442836268}
   m_Layer: 0
-  m_Name: Quad
+  m_Name: Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -834,6 +940,7 @@ GameObject:
   m_Component:
   - component: {fileID: 496016258}
   - component: {fileID: 496016257}
+  - component: {fileID: 496016259}
   m_Layer: 0
   m_Name: KingHighlight
   m_TagString: Untagged
@@ -852,7 +959,7 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-  m_Color: {r: 0.93962264, g: 0.8721185, b: 0.64355284, a: 1}
+  m_Color: {r: 0.015579104, g: 1, b: 0, a: 1}
   m_Intensity: 11.8
   m_Range: 38.9
   m_SpotAngle: 52
@@ -918,6 +1025,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 35.08, y: -48.5, z: 0}
+--- !u!114 &496016259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496016256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4f44ea4a0793ef46993b93f6b66a4b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &502923351
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1011,7 +1130,7 @@ GameObject:
   - component: {fileID: 508398378}
   - component: {fileID: 508398377}
   m_Layer: 0
-  m_Name: Four
+  m_Name: Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1052,7 +1171,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2e49ab42f6b438b439b15917aceee11e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1395,7 +1514,7 @@ GameObject:
   - component: {fileID: 665509413}
   - component: {fileID: 665509412}
   m_Layer: 0
-  m_Name: Four
+  m_Name: Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1436,7 +1555,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2e49ab42f6b438b439b15917aceee11e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1612,7 +1731,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 542890547}
+        m_TargetAssemblyTypeName: beatManager, Assembly-CSharp
+        m_MethodName: register
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Chipmunk
+          m_BoolArgument: 0
+        m_CallState: 2
   angleDifference: -20
 --- !u!65 &704096301
 BoxCollider:
@@ -1647,7 +1778,7 @@ GameObject:
   - component: {fileID: 771351376}
   - component: {fileID: 771351375}
   m_Layer: 0
-  m_Name: Four
+  m_Name: Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1688,7 +1819,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2e49ab42f6b438b439b15917aceee11e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1787,7 +1918,7 @@ GameObject:
   - component: {fileID: 891257619}
   - component: {fileID: 891257618}
   m_Layer: 0
-  m_Name: Quad (5)
+  m_Name: Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1963,7 +2094,7 @@ GameObject:
   - component: {fileID: 952521801}
   - component: {fileID: 952521800}
   m_Layer: 0
-  m_Name: Four
+  m_Name: Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2004,7 +2135,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2e49ab42f6b438b439b15917aceee11e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2389,7 +2520,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 542890547}
+        m_TargetAssemblyTypeName: beatManager, Assembly-CSharp
+        m_MethodName: register
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Error
+          m_BoolArgument: 0
+        m_CallState: 2
   angleDifference: -20
 --- !u!65 &1155088736
 BoxCollider:
@@ -2550,7 +2693,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 9855c62e7c8694b7e9dd8f6478344823, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2650,7 +2793,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 542890547}
+        m_TargetAssemblyTypeName: beatManager, Assembly-CSharp
+        m_MethodName: register
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Muu
+          m_BoolArgument: 0
+        m_CallState: 2
   angleDifference: -20
 --- !u!65 &1223925940
 BoxCollider:
@@ -2797,7 +2952,7 @@ GameObject:
   - component: {fileID: 1312248322}
   - component: {fileID: 1312248321}
   m_Layer: 0
-  m_Name: Four
+  m_Name: Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2838,7 +2993,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2e49ab42f6b438b439b15917aceee11e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2880,7 +3035,7 @@ GameObject:
   - component: {fileID: 1367887387}
   - component: {fileID: 1367887386}
   m_Layer: 0
-  m_Name: Quad (6)
+  m_Name: Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2963,7 +3118,7 @@ GameObject:
   - component: {fileID: 1509715248}
   - component: {fileID: 1509715247}
   m_Layer: 0
-  m_Name: Quad (4)
+  m_Name: Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3079,7 +3234,7 @@ GameObject:
   - component: {fileID: 1564189772}
   - component: {fileID: 1564189771}
   m_Layer: 0
-  m_Name: Four
+  m_Name: Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3120,7 +3275,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2e49ab42f6b438b439b15917aceee11e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3296,7 +3451,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 542890547}
+        m_TargetAssemblyTypeName: beatManager, Assembly-CSharp
+        m_MethodName: register
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Fart
+          m_BoolArgument: 0
+        m_CallState: 2
   angleDifference: -20
 --- !u!65 &1570766427
 BoxCollider:
@@ -3331,7 +3498,7 @@ GameObject:
   - component: {fileID: 1576476807}
   - component: {fileID: 1576476806}
   m_Layer: 0
-  m_Name: Quad
+  m_Name: Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3414,7 +3581,7 @@ GameObject:
   - component: {fileID: 1632293169}
   - component: {fileID: 1632293168}
   m_Layer: 0
-  m_Name: Quad
+  m_Name: Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3637,7 +3804,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 39da578d962009446826cf85530e3d74, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -3737,7 +3904,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 542890547}
+        m_TargetAssemblyTypeName: beatManager, Assembly-CSharp
+        m_MethodName: register
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Boom
+          m_BoolArgument: 0
+        m_CallState: 2
   angleDifference: -20
 --- !u!65 &1647975052
 BoxCollider:
@@ -3772,7 +3951,7 @@ GameObject:
   - component: {fileID: 1846024829}
   - component: {fileID: 1846024828}
   m_Layer: 0
-  m_Name: Quad
+  m_Name: Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3889,7 +4068,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f7657418219ac5042962a23f67ae5644, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -3989,7 +4168,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 542890547}
+        m_TargetAssemblyTypeName: beatManager, Assembly-CSharp
+        m_MethodName: register
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Yoda
+          m_BoolArgument: 0
+        m_CallState: 2
   angleDifference: -20
 --- !u!65 &1869024065
 BoxCollider:
@@ -4058,7 +4249,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: a8ef51fd9cb3248ffae2d11817eb10a4, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -4158,7 +4349,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 542890547}
+        m_TargetAssemblyTypeName: beatManager, Assembly-CSharp
+        m_MethodName: register
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Chicken
+          m_BoolArgument: 0
+        m_CallState: 2
   angleDifference: -20
 --- !u!65 &1945889607
 BoxCollider:
@@ -4535,8 +4738,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -876546973899608171, guid: 935e8782610a02049a9e39f4af2f9e7d, type: 3}
-  - {fileID: -6478536213147159724, guid: 935e8782610a02049a9e39f4af2f9e7d, type: 3}
+  - {fileID: -876546973899608171, guid: df4c9c640079cef49ac2f0efde437f51, type: 3}
+  - {fileID: -6478536213147159724, guid: df4c9c640079cef49ac2f0efde437f51, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4656,5 +4859,6 @@ SceneRoots:
   - {fileID: 355777986}
   - {fileID: 117622348}
   - {fileID: 496016258}
+  - {fileID: 408529531}
   - {fileID: 605156097}
   - {fileID: 882516041}

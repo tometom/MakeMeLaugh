@@ -54,7 +54,7 @@ public class beatManager : MonoBehaviour
         {SILENCE_SOUND_ENUM, BEAT_SETTER_SOUND}
     };
     public enum KingHapiness{
-        FRUSTRATED,CONFUSED,HAPPY,VERYHAPPY
+        FRUSTRATED,CONFUSED,NEUTRAL,HAPPY,VERYHAPPY
     }
     public static KingHapiness hapiness;
 
