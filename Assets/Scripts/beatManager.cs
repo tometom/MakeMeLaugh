@@ -61,10 +61,10 @@ public class beatManager : MonoBehaviour
         { "Chipmunk", BEAT_SETTER_SOUND},
         {SILENCE_SOUND_ENUM, BEAT_SETTER_SOUND}
     };
-    public enum KingHapiness{
+    public enum KingHappiness{
         FRUSTRATED,CONFUSED,NEUTRAL,HAPPY,VERYHAPPY
     }
-    public static KingHapiness hapiness;
+    public static KingHappiness happiness;
 
     private string[][] BEAT_TRACKS;
     private List<Tuple<string, string>> playerInputCurrentBar = new List<Tuple<string, string>>();
@@ -168,8 +168,8 @@ public class beatManager : MonoBehaviour
                     barScore = 0f;
                 }
                 totalScore += barScore*comboCount;
-                hapiness = calcHapiness(barScore);
-                king.triggerChange(hapiness);
+                happiness = calchappiness(barScore);
+                king.triggerChange(happiness);
                 
                 barScore = 0f;
                 playerInputCurrentBar.Clear();
@@ -198,20 +198,20 @@ public class beatManager : MonoBehaviour
     private bool isOne() {
         return BEAT_TRACKS[currentTrack][currentBar][currentBeat] == '1';
     }
-    KingHapiness calcHapiness(float score){
+    KingHappiness calchappiness(float score){
         if(score >= VERY_HAPPY_THRESHOLD){
-            return KingHapiness.VERYHAPPY;
+            return KingHappiness.VERYHAPPY;
         }
         if(score >= HAPPY_THRESHOLD){
-            return KingHapiness.HAPPY;
+            return KingHappiness.HAPPY;
         } 
         if(score >= NEUTRAL_THRESHOLD){
-            return  KingHapiness.NEUTRAL;
+            return  KingHappiness.NEUTRAL;
         }
         if(score >= CONFUSED_THRESHOLD){
-            return KingHapiness.CONFUSED;
+            return KingHappiness.CONFUSED;
         }
-            return KingHapiness.FRUSTRATED;
+            return KingHappiness.FRUSTRATED;
         
     }
 

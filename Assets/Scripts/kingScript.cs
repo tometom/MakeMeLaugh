@@ -20,8 +20,17 @@ public class kingScript : MonoBehaviour
         
     }
 
-    public void triggerChange(KingHapiness hapiness){
-        highlight.ChangeLightColor(hapiness);
-        //TODO: Animator
+    public void triggerChange(KingHappiness happiness){
+        highlight.ChangeLightColor(happiness);
+        setAndResetTrigger(happiness);
+    }
+
+
+    private void setAndResetTrigger(KingHappiness happiness)
+    {
+        //switch ()
+        {
+
+        }
     }
 }
