@@ -2193,6 +2193,7 @@ GameObject:
   - component: {fileID: 893781872}
   - component: {fileID: 893781871}
   - component: {fileID: 893781870}
+  - component: {fileID: 893781873}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -2275,6 +2276,18 @@ Transform:
   - {fileID: 1103378973}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &893781873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893781869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e46d49f7f17ffed4faeabe8ec904c5bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &936080996 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5256789710405179220, guid: 91301a62b04e54b1b8941932c04d54c7, type: 3}
@@ -5401,6 +5414,10 @@ PrefabInstance:
       propertyPath: highlight
       value: 
       objectReference: {fileID: 496016259}
+    - target: {fileID: 6171679745276666078, guid: d9b0b2fee19f6a84890517ab5a718be9, type: 3}
+      propertyPath: cameraShake
+      value: 
+      objectReference: {fileID: 893781873}
     - target: {fileID: 7777703193540682668, guid: d9b0b2fee19f6a84890517ab5a718be9, type: 3}
       propertyPath: m_Name
       value: King

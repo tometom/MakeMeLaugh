@@ -8,6 +8,7 @@ public class kingScript : MonoBehaviour
 
     public Animator animator;
     public SpotLightScript highlight;
+    public CameraShakeScript cameraShake;
 
     //face materials
     public Material kingAngryFaceMaterial;
@@ -32,6 +33,7 @@ public class kingScript : MonoBehaviour
         highlight.ChangeLightColor(happiness);
         setAndResetTrigger(happiness);
         changeFaceMaterial(happiness);
+        cameraShake.shakeMultiplierChange(happiness);
     }
 
 
