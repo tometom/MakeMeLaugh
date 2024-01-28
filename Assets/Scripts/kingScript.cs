@@ -11,7 +11,7 @@ public class kingScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        animator.updateMode = AnimatorUpdateMode.UnscaledTime;
     }
 
     // Update is called once per frame
@@ -28,8 +28,63 @@ public class kingScript : MonoBehaviour
 
     private void setAndResetTrigger(KingHappiness happiness)
     {
-        //switch ()
+        switch (happiness)
         {
+            case KingHappiness.FRUSTRATED:
+                animator.ResetTrigger("GetDead");
+                animator.ResetTrigger("GetHappy");
+                animator.ResetTrigger("GetIdle");
+                animator.ResetTrigger("GetSmiling");
+                animator.ResetTrigger("GetSus");
+                animator.SetTrigger("GetAngry");
+                break;
+
+
+            case KingHappiness.CONFUSED:
+                animator.ResetTrigger("GetDead");
+                animator.ResetTrigger("GetHappy");
+                animator.ResetTrigger("GetIdle");
+                animator.ResetTrigger("GetSmiling");
+                animator.ResetTrigger("GetAngry");
+                animator.SetTrigger("GetSus");
+                break;
+
+            case KingHappiness.NEUTRAL:
+                animator.ResetTrigger("GetDead");
+                animator.ResetTrigger("GetHappy");
+                animator.ResetTrigger("GetSus");
+                animator.ResetTrigger("GetSmiling");
+                animator.ResetTrigger("GetAngry");
+                animator.SetTrigger("GetIdle");
+                break;
+
+            case KingHappiness.HAPPY:
+                animator.ResetTrigger("GetDead");
+                animator.ResetTrigger("GetIdle");
+                animator.ResetTrigger("GetSus");
+                animator.ResetTrigger("GetSmiling");
+                animator.ResetTrigger("GetAngry");
+                animator.SetTrigger("GetHappy");
+                break;
+
+            case KingHappiness.VERYHAPPY:
+                animator.ResetTrigger("GetDead");
+                animator.ResetTrigger("GetIdle");
+                animator.ResetTrigger("GetSus");
+                animator.ResetTrigger("GetHappy");
+                animator.ResetTrigger("GetAngry");
+                animator.SetTrigger("GetSmiling");
+                break;
+
+
+            default:
+                animator.ResetTrigger("GetDead");
+                animator.ResetTrigger("GetHappy");
+                animator.ResetTrigger("GetSus");
+                animator.ResetTrigger("GetSmiling");
+                animator.ResetTrigger("GetAngry");
+                animator.SetTrigger("GetIdle");
+                break;
 
         }
     }
