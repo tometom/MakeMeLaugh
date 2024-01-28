@@ -82,7 +82,7 @@ public class beatManager : MonoBehaviour
     float barScore = 0;
     public static float totalScore = 0;
 
-    public static int comboCount = 1;
+    public static int comboCount = 0;
 
     private Dictionary<string, int> repetitionCounter = new Dictionary<string, int>();
     public AudioSource beatSound, oneSound;
@@ -180,12 +180,12 @@ public class beatManager : MonoBehaviour
                         comboCount = 10;
                     }
                 }else{
-                    comboCount = 1;
+                    comboCount = 0;
                 }
                 if(barScore <= 0f){
                     barScore = 0f;
                 }
-                totalScore += barScore*comboCount;
+                totalScore += barScore*(comboCount>0?comboCount:1);
                 happiness = calchappiness(barScore);
                 
                 barScore = 0f;
