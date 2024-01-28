@@ -82,7 +82,7 @@ public class beatManager : MonoBehaviour
     float barScore = 0;
     public static float totalScore = 0;
 
-    int comboCount = 1;
+    public static int comboCount = 1;
 
     private Dictionary<string, int> repetitionCounter = new Dictionary<string, int>();
     AudioSource beatSound;
