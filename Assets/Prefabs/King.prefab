@@ -72,6 +72,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 5885156369683975372}
   highlight: {fileID: 0}
+  kingAngryFaceMaterial: {fileID: 2100000, guid: 11e1622421c2cda44ba19012d4efa42e, type: 2}
+  kingSuspiciousFaceMaterial: {fileID: 2100000, guid: b969988278abfcb409f9532aba93e3f2, type: 2}
+  kingNeutralFaceMaterial: {fileID: 2100000, guid: eabb6cb21fff1bf4a9dfe83a4342a26e, type: 2}
+  kingHappyFaceMaterial: {fileID: 2100000, guid: 296c1c6b939a0534791fa91709f9f8ef, type: 2}
+  kingSmilingFaceMaterial: {fileID: 2100000, guid: cf9cf3339f899344a85e6e8cf995eff4, type: 2}
 --- !u!1001 &1621766577485083245
 PrefabInstance:
   m_ObjectHideFlags: 0
