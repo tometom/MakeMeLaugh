@@ -77,8 +77,8 @@ public class beatManager : MonoBehaviour
     AudioSource beatSound;
     [SerializeField]
     public static int bpm = 120;
-    public float timeTillNextBeat;
-    public float timer;
+    public static float timeTillNextBeat;
+    public static float timer;
     [Range(0f, 1f)]
     public float hitTolerance;
     // Start is called before the first frame update

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1116,8 +1116,6 @@ MonoBehaviour:
   currentTrack: 0
   currentBar: 0
   currentBeat: 0
-  timeTillNextBeat: 0
-  timer: 0
   hitTolerance: 0
 --- !u!4 &542890548
 Transform:
@@ -1345,6 +1343,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 605156097}
+  - component: {fileID: 605156098}
   m_Layer: 0
   m_Name: beatTimer
   m_TagString: Untagged
@@ -1370,6 +1369,20 @@ Transform:
   - {fileID: 1107566515}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
+--- !u!114 &605156098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 605156096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1ac6e1f6cfe78b468bf1ea63f74a280, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lclEndingPos: {x: 22.6, y: 0, z: 0}
+  lclStartingPos: {x: 33, y: 0, z: 0}
 --- !u!1 &665509409
 GameObject:
   m_ObjectHideFlags: 0
@@ -2152,7 +2165,7 @@ Transform:
   m_GameObject: {fileID: 1107566514}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 27.7, y: 0, z: 0}
+  m_LocalPosition: {x: 22.6, y: 0, z: 0}
   m_LocalScale: {x: 0.15, y: 1, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children: []
