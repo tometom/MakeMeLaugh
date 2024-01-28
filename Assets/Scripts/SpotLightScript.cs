@@ -39,7 +39,7 @@ public class SpotLightScript : MonoBehaviour
         }
     }
 
-    void ChangeLightColor(KingHapiness happiness)
+    public void ChangeLightColor(KingHapiness happiness)
     {
         Color colorToChange = new Color(r: (255f/255f), g: (0f / 255f), b: (0f / 255f));
         switch (happiness)

@@ -6,8 +6,15 @@ using UnityEngine;
 
 public class beatManager : MonoBehaviour
 {
+    const float VERY_HAPPY_THRESHOLD = 75f;
+    const float HAPPY_THRESHOLD = 50f;
 
-    public int[] positionModifier = {2, 4, 3, 6};
+    const float NEUTRAL_THRESHOLD = 30f;
+
+    const float CONFUSED_THRESHOLD = 20f;
+
+    const float FRUSTRATED_THRESHOLD = 0f;
+    public int[] positionModifier = {5, 2, 5, 3};
 
     static int BEAT_SETTER_SOUND = 1;
     static int PUNCHLINE_SOUND = 3;
@@ -103,7 +110,7 @@ public class beatManager : MonoBehaviour
 
         if(timer>= timeTillNextBeat){
             
-            if(isOne())
+            //if(isOne())
                 beatSound.Play();
             
             if(currentBeat >= 3){
@@ -160,6 +167,7 @@ public class beatManager : MonoBehaviour
                     barScore = 0f;
                 }
                 totalScore += barScore*comboCount;
+                hapiness = calcHapiness(barScore);
                 barScore = 0f;
                 playerInputCurrentBar.Clear();
             } else
@@ -186,6 +194,22 @@ public class beatManager : MonoBehaviour
 
     private bool isOne() {
         return BEAT_TRACKS[currentTrack][currentBar][currentBeat] == '1';
+    }
+    KingHapiness calcHapiness(float score){
+        if(score >= VERY_HAPPY_THRESHOLD){
+            return KingHapiness.VERYHAPPY;
+        }
+        if(score >= HAPPY_THRESHOLD){
+            return KingHapiness.HAPPY;
+        } 
+        if(score >= NEUTRAL_THRESHOLD){
+            return  KingHapiness.NEUTRAL;
+        }
+        if(score >= CONFUSED_THRESHOLD){
+            return KingHapiness.CONFUSED;
+        }
+            return KingHapiness.FRUSTRATED;
+        
     }
 
     public float getScore()
