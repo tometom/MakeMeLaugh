@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class beatManager : MonoBehaviour
 {
+    public kingScript king;
     const float VERY_HAPPY_THRESHOLD = 75f;
     const float HAPPY_THRESHOLD = 50f;
 
@@ -168,6 +169,8 @@ public class beatManager : MonoBehaviour
                 }
                 totalScore += barScore*comboCount;
                 hapiness = calcHapiness(barScore);
+                king.triggerChange(hapiness);
+                
                 barScore = 0f;
                 playerInputCurrentBar.Clear();
             } else
