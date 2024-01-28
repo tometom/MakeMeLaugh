@@ -1508,7 +1508,7 @@ MonoBehaviour:
   currentBeat: 0
   beatSound: {fileID: 542890549}
   oneSound: {fileID: 542890550}
-  hitTolerance: 1
+  hitTolerance: 0.5
 --- !u!4 &542890548
 Transform:
   m_ObjectHideFlags: 0
