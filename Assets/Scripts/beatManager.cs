@@ -4,9 +4,11 @@ using System.Collections.Generic;
 using System.Text;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class beatManager : MonoBehaviour
 {
+    public GameObject winScreen;
     public kingScript king;
 
     bool hasInputThisBar = false;
@@ -97,13 +99,15 @@ public class beatManager : MonoBehaviour
     void Start()
     {
         timer = 0;
+        winScreen.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(totalScore > 8000f){
+        if(totalScore > 5f){
             king.killKing();
+            StartCoroutine(endGame(4.5f));
         }
         timeTillNextBeat = 60f/bpm;
         timer+=Time.deltaTime;
@@ -279,5 +283,14 @@ public class beatManager : MonoBehaviour
 
         }
         
+    }
+    IEnumerator endGame(float seconds){
+        yield return new WaitForSeconds(seconds);
+        winScreen.SetActive(true);
+        GameObject.Find("MainCamera/UI").SetActive(false);
+        Time.timeScale = 0f;
+    }
+    public static void restartGame(){
+        SceneManager.LoadScene("Main Menu");
     }
 }
