@@ -7,6 +7,8 @@ using UnityEngine;
 public class beatManager : MonoBehaviour
 {
     public kingScript king;
+
+    bool hasInputThisBar = false;
     const float VERY_HAPPY_THRESHOLD = 75f;
     const float HAPPY_THRESHOLD = 50f;
 
@@ -28,7 +30,6 @@ public class beatManager : MonoBehaviour
 
     static Dictionary<string, string> Bars = new Dictionary<string, string>{
         { "drop" , "0001" },
-        { "zero" , "0000" },
         { "full" , "1111" },
         { "1step", "1101" },
         { "rep"  , "0101" },
@@ -69,8 +70,7 @@ public class beatManager : MonoBehaviour
     }
     public static KingHappiness happiness;
 
-    private string[][] BEAT_TRACKS;
-    private List<Tuple<string, string>> playerInputCurrentBar = new List<Tuple<string, string>>();
+    public List<Tuple<string, string>> playerInputCurrentBar = new List<Tuple<string, string>>();
 
 
     public int currentTrack = 0;
@@ -85,9 +85,9 @@ public class beatManager : MonoBehaviour
     int comboCount = 1;
 
     private Dictionary<string, int> repetitionCounter = new Dictionary<string, int>();
-    AudioSource beatSound;
+    public AudioSource beatSound, oneSound;
     [SerializeField]
-    public static int bpm = 120;
+    public static int bpm = 90;
     public static float timeTillNextBeat;
     public static float timer;
     [Range(0f, 1f)]
@@ -95,14 +95,6 @@ public class beatManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        BEAT_TRACKS = new string[][] {
-            new string[] { Bars["full"], Bars["split"], Bars["full"], Bars["split"], Bars["init"], Bars["zero"], Bars["drop"], Bars["full"], Bars["split"], Bars["full"], Bars["split"], Bars["init"], Bars["zero"], Bars["drop"],Bars["full"], Bars["split"], Bars["full"], Bars["split"], Bars["init"], Bars["zero"], Bars["drop"],Bars["full"], Bars["split"], Bars["full"], Bars["split"], Bars["init"], Bars["zero"], Bars["drop"],Bars["full"], Bars["split"], Bars["full"], Bars["split"], Bars["init"], Bars["zero"], Bars["drop"],  },
-        };
-
-        Debug.Log(BEAT_TRACKS);
-
-
-        beatSound = GetComponent<AudioSource>();
         timer = 0;
     }
 
@@ -111,13 +103,18 @@ public class beatManager : MonoBehaviour
     {
         timeTillNextBeat = 60f/bpm;
         timer+=Time.deltaTime;
-
         if(timer>= timeTillNextBeat){
-            
-            //if(isOne())
+            timer = 0f;
+            if(currentBeat == 0){
+                oneSound.Play();
+            }
+            else{
                 beatSound.Play();
+            }
+            //if(isOne())
             
             if(currentBeat >= 3){
+                hasInputThisBar = false;
                 currentBar++; 
                 currentBeat = 0;
                 // TODO: Calculate the Bar Score and Add to TotalScore
@@ -157,6 +154,7 @@ public class beatManager : MonoBehaviour
                     }
                 }
                 if(hitArray[3] == null){
+                    playerInputCurrentBar.Add(new Tuple<string, string>(SILENCE_SOUND_ENUM,HIT_ENUM));
                     hitArray[3] = SILENCE_SOUND_ENUM;
                 }
                 StringBuilder sb = new StringBuilder(4);
@@ -178,6 +176,9 @@ public class beatManager : MonoBehaviour
                 }
                 if(hasPattern){
                     comboCount++;
+                    if(comboCount>=10){
+                        comboCount = 10;
+                    }
                 }else{
                     comboCount = 1;
                 }
@@ -186,15 +187,17 @@ public class beatManager : MonoBehaviour
                 }
                 totalScore += barScore*comboCount;
                 happiness = calchappiness(barScore);
-                king.triggerChange(happiness);
                 
                 barScore = 0f;
-                playerInputCurrentBar.Clear();
-            } else
-            {   //Inside the current Bar
+                king.triggerChange(happiness);
+
+            } else {   
+                //Inside the current Bar
+                if(!hasInputThisBar && currentBeat == 0){
+                    playerInputCurrentBar.Clear();
+                }
                 currentBeat++;
                 // Checking if User chose to skip beat
-
                 int hitCounter = 0;
                 foreach (var elem in playerInputCurrentBar) {
                     if (elem.Item2.Equals(HIT_ENUM))
@@ -202,19 +205,14 @@ public class beatManager : MonoBehaviour
                         hitCounter++;
                     } 
                 }
-
                 if (hitCounter < currentBeat)
-                {
+                {   
                     playerInputCurrentBar.Add(new Tuple<string, string>(SILENCE_SOUND_ENUM, HIT_ENUM));
                 }
             }
-            timer = 0f;
         }
     }
 
-    private bool isOne() {
-        return BEAT_TRACKS[currentTrack][currentBar][currentBeat] == '1';
-    }
     KingHappiness calchappiness(float score){
         if(score >= VERY_HAPPY_THRESHOLD){
             return KingHappiness.VERYHAPPY;
@@ -239,9 +237,13 @@ public class beatManager : MonoBehaviour
 
 
     public void register(string soundName) {
-        if(timeTillNextBeat-timer > timeTillNextBeat * hitTolerance && currentBeat != lastInputBeat)
+        if(timeTillNextBeat-timer < timeTillNextBeat * hitTolerance && currentBeat != lastInputBeat)
         {
             //Hit
+            hasInputThisBar = true;
+            if(currentBeat ==0 && playerInputCurrentBar.Count !=0 ){
+                playerInputCurrentBar.Clear();
+            }
             playerInputCurrentBar.Add(new Tuple<string, string>(soundName, HIT_ENUM));
             if(!repetitionCounter.ContainsKey(soundName))
                 repetitionCounter.Add(soundName, 0);
@@ -250,8 +252,14 @@ public class beatManager : MonoBehaviour
         }
         else
         {
+            hasInputThisBar = true;
             //Miss
+            if(currentBeat ==0 && playerInputCurrentBar.Count !=0 ){
+                playerInputCurrentBar.Clear();
+            }
+            lastInputBeat = currentBeat;
             playerInputCurrentBar.Add(new Tuple<string, string>(soundName, MISS_ENUM));
+
         }
         
     }
