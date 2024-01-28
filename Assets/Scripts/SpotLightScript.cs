@@ -19,49 +19,49 @@ public class SpotLightScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            ChangeLightColor(KingHapiness.FRUSTRATED);
+            ChangeLightColor(KingHappiness.FRUSTRATED);
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            ChangeLightColor(KingHapiness.CONFUSED);
+            ChangeLightColor(KingHappiness.CONFUSED);
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            ChangeLightColor(KingHapiness.NEUTRAL);
+            ChangeLightColor(KingHappiness.NEUTRAL);
         }
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
-            ChangeLightColor(KingHapiness.HAPPY);
+            ChangeLightColor(KingHappiness.HAPPY);
         }
         if (Input.GetKeyDown(KeyCode.Alpha5))
         {
-            ChangeLightColor(KingHapiness.VERYHAPPY);
+            ChangeLightColor(KingHappiness.VERYHAPPY);
         }
     }
 
-    public void ChangeLightColor(KingHapiness happiness)
+    public void ChangeLightColor(KingHappiness happiness)
     {
         Color colorToChange = new Color(r: (255f/255f), g: (0f / 255f), b: (0f / 255f));
         switch (happiness)
         {
-            case KingHapiness.FRUSTRATED:
+            case KingHappiness.FRUSTRATED:
                 colorToChange = new Color(r: (255f / 255f), g: (0f / 255f), b: (0f / 255f));
                 break;
 
 
-            case KingHapiness.CONFUSED:
+            case KingHappiness.CONFUSED:
                 colorToChange = new Color(r: (242f / 255f), g: (120f / 255f), b: (58f / 255f));
                 break;
 
-            case KingHapiness.NEUTRAL:
+            case KingHappiness.NEUTRAL:
                 colorToChange = new Color(r: (240f / 255f), g: (222f / 255f), b: (164f / 255f));
                 break;
 
-            case KingHapiness.HAPPY:
+            case KingHappiness.HAPPY:
                 colorToChange = new Color(r: (156f / 255f), g: (255f / 255f), b: (0f / 255f));
                 break;
 
-            case KingHapiness.VERYHAPPY:
+            case KingHappiness.VERYHAPPY:
                 colorToChange = new Color(r: (0f / 255f), g: (255f / 255f), b: (0f / 255f));
                 break;
 
