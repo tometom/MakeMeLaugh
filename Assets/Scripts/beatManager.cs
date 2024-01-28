@@ -105,7 +105,7 @@ public class beatManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(totalScore > 5f){
+        if(totalScore > 8000f){
             king.killKing();
             StartCoroutine(endGame(4.5f));
         }
