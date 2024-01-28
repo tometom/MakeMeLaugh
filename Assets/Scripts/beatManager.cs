@@ -14,11 +14,7 @@ public class beatManager : MonoBehaviour
 
     const float CONFUSED_THRESHOLD = 20f;
 
-    const float FRUSTRATED_THRESHOLD = 0f;
     public int[] positionModifier = {5, 2, 5, 3};
-
-    static int BEAT_SETTER_SOUND = 1;
-    static int PUNCHLINE_SOUND = 3;
 
     static public float MISS_BAR_PENALTY_MULTIPLIER = 1f;
 
@@ -26,6 +22,9 @@ public class beatManager : MonoBehaviour
 
     static string HIT_ENUM = "HIT";
     static string MISS_ENUM = "MISS";
+
+    static string BEAT_SETTER_ENUM = "BEAT_SETTER";
+    static string PUNCH_LINE_ENUM = "PUNCH_LINE";
 
     static Dictionary<string, string> Bars = new Dictionary<string, string>{
         { "drop" , "0001" },
@@ -50,17 +49,21 @@ public class beatManager : MonoBehaviour
         { SILENCE_SOUND_ENUM, 0f },
     };
 
-    static Dictionary<string, int> soundCategories = new Dictionary<string, int>{
-        { "Fart", BEAT_SETTER_SOUND},
-        { "Boom", PUNCHLINE_SOUND},
-        { "Muu", PUNCHLINE_SOUND},
-        { "Chicken", BEAT_SETTER_SOUND},
-        { "PLACE_HOLDER", BEAT_SETTER_SOUND},
-        { "Yoda", PUNCHLINE_SOUND},
-        { "Error", BEAT_SETTER_SOUND},
-        { "Chipmunk", BEAT_SETTER_SOUND},
-        {SILENCE_SOUND_ENUM, BEAT_SETTER_SOUND}
+    static Dictionary<string, string> soundCategories = new Dictionary<string, string>{
+        { "Fart", BEAT_SETTER_ENUM},
+        { "Boom", PUNCH_LINE_ENUM},
+        { "Muu", PUNCH_LINE_ENUM},
+        { "Chicken", BEAT_SETTER_ENUM},
+        { "PLACE_HOLDER", BEAT_SETTER_ENUM},
+        { "Yoda", PUNCH_LINE_ENUM},
+        { "Error", BEAT_SETTER_ENUM},
+        { "Chipmunk", BEAT_SETTER_ENUM},
+        {SILENCE_SOUND_ENUM, BEAT_SETTER_ENUM}
     };
+
+    static float[] beatSetterMultiplier = { 2f, 2f, 1f, 1f };
+    static float[] punchLineMultiplier = { 1f, 1f, 2.5f, 2.5f };
+
     public enum KingHappiness{
         FRUSTRATED,CONFUSED,NEUTRAL,HAPPY,VERYHAPPY
     }
@@ -129,7 +132,21 @@ public class beatManager : MonoBehaviour
                     if(hitOrMiss.Equals(HIT_ENUM))
                     {
                         if(!soundName.Equals(SILENCE_SOUND_ENUM)){
-                            barScore += points[soundName] / repetitionCounter[soundName] * positionModifier[beatIndex];
+                            float soundScore = points[soundName] / repetitionCounter[soundName] * positionModifier[beatIndex];
+
+                            float categoryMultiplier = 1f;
+
+                            if (soundCategories[soundName].Equals(BEAT_SETTER_ENUM))
+                            {
+                                categoryMultiplier = beatSetterMultiplier[beatIndex];
+
+                            }else if(soundCategories[soundName].Equals(BEAT_SETTER_ENUM))
+                            {
+                                categoryMultiplier = punchLineMultiplier[beatIndex];
+                            }
+
+                            barScore += soundScore * categoryMultiplier;
+
                         }
                         hitArray[beatIndex] = soundName;
                         beatIndex++;
