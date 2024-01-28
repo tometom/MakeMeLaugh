@@ -14,7 +14,7 @@ public class patternShowerScript : MonoBehaviour
         { "Boom", 7},
         { "Muu", 0},
         { "Chicken", 1},
-        { "PLACE_HOLDER", 4},
+        { "Drum", 4},
         { "Yoda", 5},
         { "Error", 2},
         { "Chipmunk", 6},
