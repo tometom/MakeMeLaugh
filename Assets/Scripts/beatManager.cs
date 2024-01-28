@@ -14,7 +14,6 @@ public class beatManager : MonoBehaviour
 
     const float CONFUSED_THRESHOLD = 20f;
 
-    const float FRUSTRATED_THRESHOLD = 0f;
     public int[] positionModifier = {5, 2, 5, 3};
 
     static int BEAT_SETTER_SOUND = 1;
